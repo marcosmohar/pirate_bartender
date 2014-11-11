@@ -51,6 +51,18 @@ def main():
   for item in drink:
     print "{}".format(item)
   print name
+  while True:
+    new_drink= raw_input("would you like another drink?")
+    if new_drink in ['y','yes']:
+      select = type_of_drink(questions)
+      drink = make_drink(select)
+      name = drink_name()
+      print "The ingredients in your drink are:"
+      for item in drink:
+        print "{}".format(item)
+        print name
+    else:
+      return False
 
       
     
