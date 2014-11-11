@@ -16,6 +16,9 @@ ingredients = {
     "fruity": ["slice of orange", "dash of cassis", "cherry on top"]
 }
 
+nouns = ['mailman', 'bullfighter', 'sky', 'floor', 'beach', 'bucaneer']
+adjetives = ['sexy', 'silky', 'gorgeous', 'deep', 'flying']
+
 def type_of_drink(quest):
   """
   Returns a dictionary with booleans as values for the question's answers
@@ -37,6 +40,8 @@ def make_drink(preferences):
           drink.append(random.choice(ingredients[flavor]))
   return drink
 
+def drink_name():
+  return "Your drink's name is {} {}.".format(random.choice(adjetives),random.choice(nouns))
  
 def main():
   select = type_of_drink(questions)
